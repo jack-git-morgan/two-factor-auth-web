@@ -1,0 +1,50 @@
+
+<div ng-show="loggedIn == false"> 
+    <h2 class="subtitle"><strong>LOGIN</strong></h2>
+
+    <div class="field">
+        <div class="control has-icons-left has-icons-right">
+            <input ng-model="username" class="input" type="text">
+            <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="field">
+        <div class="control has-icons-left has-icons-right">
+            <input ng-model="password" class="input" type="text">
+            <span class="icon is-small is-left">
+                <i class="fas fa-key"></i>
+            </span>
+        </div>
+    </div>
+
+    <button ng-click="attemptLogin()" class="button is-primary is-fullwidth"><strong>SUBMIT</strong></button>
+    <br/>
+    <button ui-sref="createuser" class="button is-primary is-fullwidth"><strong>CREATE USER</strong></button>
+</div>
+
+<div ng-show="loggedIn == true && authenticated == false">
+    <h2 class="subtitle"><strong>ENTER 6-DIGIT AUTH CODE</strong></h2>
+    <div class="field">
+        <div class="control has-icons-left has-icons-right">
+            <input ng-model="authCode" class="input" type="password">
+            <span class="icon is-small is-left">
+                <i class="fas fa-key"></i>
+            </span>
+        </div>
+    </div>
+
+    <button ng-click="attemptAuthenticate()" class="button is-primary is-fullwidth"><strong>SUBMIT</strong></button>
+    <br/>
+    <button ng-click="returnToLogin()" class="button is-primary is-fullwidth"><strong>BACK</strong></button>
+
+</div>
+
+<div ng-show="authenticated == true">
+    <strong>LOGGED IN</strong>
+    <br/>
+    <button ng-click="returnToLogin()" class="button is-primary is-fullwidth"><strong>RESTART</strong></button>
+</div>
+

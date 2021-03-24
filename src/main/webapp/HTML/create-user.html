@@ -1,0 +1,33 @@
+
+
+<h2 class="subtitle"><strong>CREATE USER</strong></h2>
+
+<div class="field">
+    <div class="control has-icons-left has-icons-right">
+        <input ng-model="username" class="input" type="text">
+        <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+        </span>
+    </div>
+</div>
+
+<div class="field">
+    <div class="control has-icons-left has-icons-right">
+        <input ng-model="password" class="input" type="text">
+        <span class="icon is-small is-left">
+            <i class="fas fa-key"></i>
+        </span>
+    </div>
+</div>
+
+<div ng-show="authReady == true">
+    <h2><strong>GOOGLE AUTHENTICATOR SETUP KEY: {{setupKey}}</strong></h2>
+    <br/>
+    <figure class="image is-256x256">
+        <img src="{{barcodeEncoded}}">
+    </figure>
+</div>
+
+<br/>
+<button ng-show="authReady == false" ng-click="getGoogleAuthRegDetails()" class="button is-primary is-fullwidth"><strong>GENERATE GOOGLE AUTH REG INFO</strong></button>
+<button ng-show="authReady == true" ui-sref="login" class="button is-primary is-fullwidth"><strong>CREATE USER</strong></button>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<style>
+    .center {
+        text-align: center;
+    }
+
+    .vert-padding-top {
+        padding-top: 10em;
+    }
+</style>
+
+<html>
+    <head>
+        <title>Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+        <script src="https://kit.fontawesome.com/2aaa6c4309.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.js"></script>   
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-sanitize.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+
+
+        <script type="text/javascript" src="JS/create-user-controller.js"></script>
+        <script type="text/javascript" src="JS/login-controller.js"></script>
+        <script type="text/javascript" src="JS/router.js"></script>
+
+    </head>
+    <body ng-app="myApp">
+
+        <section class="section">
+            <div class="columns vert-padding-top">
+                <div class="column is-one-third"></div>
+
+                <div class="column is-one-third center">
+                    <ui-view/>
+                </div>
+
+                <div class="column is-one-third"></div>
+            </div>
+        </section>
+    </body>
+</html>
